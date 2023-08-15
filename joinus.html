@@ -1,0 +1,401 @@
+<html>
+    <head>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script type="text/javascript">
+
+function fun1()
+{
+  var a,b,c,text,text1,y,k,m;
+  var text2,text3,text4,text5;
+  a=document.getElementById("n1").value;
+  if(a=="")
+  {
+    text="*Name cant be left empty !!";
+  }
+  else
+  {
+    text="";
+  }
+  document.getElementById("a1").innerHTML=text;
+
+  y=document.getElementById("name1").value;
+
+  if(y=="")
+                {
+                    text1="*Roll Number cant be left empty";
+                    
+                }
+                else if(y.length !== 16 || y[0]!="C" || y[1]!="B"|| y[2]!=".") {
+                  text1="*Please enter a valid Roll number";
+                }
+                else{
+                    text1="";
+                }
+                
+                document.getElementById("a2").innerHTML=text1;
+
+                b=document.getElementById("checkbox").value;
+                c=document.getElementById("other").value;
+                k=document.getElementById("area").value;
+                if(b=="Other" && c=="")
+                {
+                  
+                  text2="*Other cant be empty";
+                }
+                
+                else
+                {
+                  text2="";
+                }
+                document.getElementById("a3").innerHTML=text2;
+                if(b!="Other"&& c!=="")
+                {
+                  text5="*Error !!"
+
+                }
+                else{
+                  text5="";
+                }
+                document.getElementById("a3").innerHTML=text5;
+
+                if(k=="" )
+                {
+                  text3="*Cant be left blank";
+                }
+                
+                else{
+                  text3="";
+                }
+                document.getElementById("a4").innerHTML=text3;
+
+                var op = document.getElementById("files").value;
+      
+
+      if (op=="") {
+        
+        text4="*File not selected.";
+      
+      } else if(op!="") {
+        text4="";
+      }
+      document.getElementById("a5").innerHTML=text4;
+
+    if(text1=="" &&text2=="" &&text3=="" &&text4=="" &&text5=="" )
+    {
+    document.write("Abhina is a good grl");
+      
+    }
+
+    
+    }
+      
+    
+  
+
+       
+
+  
+
+</script>
+        <style>
+          
+          #a1,#a2,#a3,#a4,#a6,#a7,#a5{color: red;text-align:left;}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+
+
+
+
+
+
+.container2 {
+  position: relative;
+}
+
+
+.text-block2 {
+  position: absolute;
+  
+  right: 350px;
+  top: 500;
+ 
+  color: rgb(0, 0, 0);
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+
+
+
+
+
+select, option { width:304px; height: 20px;}
+tr,td{height:35px;width:175px;text-align:center;}
+
+.checkbox_select_submit
+{
+    background: #791818;
+    color: white;
+    padding: 10px 5px 5px;
+    border: 0;
+    width: 100%;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    
+    
+}
+
+
+
+.a{
+    color: #000000;
+    text-decoration: none;}
+
+
+
+
+
+
+.bg{
+    
+  
+    background-size:100%;
+    width:100%;
+    background-repeat: no-repeat;
+    
+}
+
+
+
+        </style>
+    </head>
+    <body >
+    </br>
+    <video autoplay muted loop id="myVideo">
+      <source src="production_id.mp4" type="video/mp4">
+      </video>
+   
+
+      <div class="content">
+      
+        
+
+
+
+    &emsp; &emsp; &emsp; &emsp; &emsp;
+
+    &emsp; &emsp; &emsp; &emsp; 
+  
+    <span style="font-size: xx-large;font-weight:700;color:white;text-align: center">
+    
+ 
+  </span>
+
+      <table style="color: rgb(255, 255, 255);font-size: medium;font-weight: 400;right:40;text-align: center;width:1200px;text-align: center;">
+        <tr>
+          <th style="font-size: xx-large;font-weight:700;color:white;text-align: center;height: 90px;" colspan="2">
+            SUBMIT NOW !!
+          </th>
+        </tr>
+        <tr>
+
+          <td>
+             
+            <label>Name *</label>
+            </td>
+            <td>
+<input  id="n1" name="n1"  placeholder="First and last name *" size="40">
+
+          </td>
+          <td style="text-align:left;">
+            <p id="a1"></p>
+
+        </td>
+          
+
+          
+        </tr>
+        <tr>
+
+        
+        <td  >
+          Roll Number *
+        </td>
+        <td>
+          <input type="text" id="name1" name="name" placeholder="CB.EN.*****" size="40">
+
+
+        </td>
+        <td>
+          <p id="a2"></p>
+
+      </td>
+      </tr>
+      <tr>
+        <td  >
+          Category *
+        </td>
+        <td>
+          
+            <select id="checkbox">
+              <option value="CSE"selected>Computer Science</option>
+  <option value="EEE">EEE</option>
+  <option value="AI/ML">AI/ML</option>
+  <option value="ECE">ECE</option>
+  <option value="Other" >Other</option>
+</select>
+            </select>
+          
+
+
+
+        </td>
+
+      </tr>
+      <tr>
+        <td  >
+
+        &emsp;  If it is not listed above
+        </td>
+        <td>
+          
+            <input type="text" id="other" size="40" >
+            
+        </td>
+
+        <td>
+          <p id="a3"></p>
+
+      </td>
+
+
+
+      </tr>
+      <tr>
+        <td>
+          Description *
+        </td>
+        <td>
+          <label >
+                
+            <textarea id="area" name="area" cols="38" rows="8" style="text-align: right;"></textarea> </p>
+               </label>
+             </span>
+        </td>
+
+        <td>
+          <p id="a4"></p>
+
+      </td>
+        
+      </tr>
+      <tr>
+<td>
+  Add an Image *
+</td>
+<td>
+    <input id="files" type="file" value="Add an Image" name="Add an image">
+ 
+</td>
+<td>
+  <p id="a5"></p>
+
+</td>
+
+      </tr>
+      <tr>
+        <td colspan="2" style="width:600px;">
+
+          <h4 >
+<br>
+           <span style="background-color: #f1f1f1;text-align: center;"> <button class="a" onclick="fun1()"></br>&emsp;  Submit&emsp; <br> </br> </span></h4>
+              
+            </td>
+      </tr>
+      
+
+
+      </table>
+
+    
+ 
+
+      
+      
+
+      <p style="text-align:center;font-size: larger;color: rgb(255, 255, 255);">
+        <span style="font-size:xx-large ;color: #ffffff;">"</span> Love and spiritual values received from parents are the strongest assets for a child
+        to face the various trials of adulthood.  <span style="font-size:xx-large ;color: #fff8f8;">"</span> 
+      </br>
+        <span style="text-align: right;">- Satguru Mata Amritanandamayi Devi
+        </span> 
+      </br>
+    </p>
+
+
+      
+
+
+</div>
+
+      
+
+
+        
+
+
+
+
+
+ 
+
+
+
+        
+
+    </body>
+</html>

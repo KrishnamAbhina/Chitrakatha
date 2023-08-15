@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Academics</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('academics.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: rgb(131, 78, 9);
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    .term-box {
+      padding: 40px;
+      text-align: center;
+      margin: 40px;
+      color: #fff;
+    }
+
+    .term-box h2 {
+      font-size: 36px;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+
+    .term-box p {
+      font-size: 20px;
+      margin: 0;
+      margin-bottom: 30px;
+    }
+
+    .term-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .term-box li {
+      margin-bottom: 15px;
+    }
+
+    .term-box .event-box {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      background-color: #f7931e;
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .term-box .event-box:hover {
+      transform: translateY(10px);
+    }
+
+    .term-box .event-box:hover .event-gist {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .term-box .event-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .term-box .event-gist {
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .term-box .event-gist p {
+      font-size: 16px;
+      margin: 0;
+      color: #fff;
+    }
+
+    footer {
+      background-color: rgb(0, 0, 0);
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      margin-top: auto;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ACADEMICS</h1>
+  </header>
+
+  <div class="term-box"n>
+    <h2 ><span style="color: black;"><u>RECENT POSTS</u></span></h2>
+    <br>
+    <br>
+    <ul>
+      <li>
+        <a href="secure.html" style="color: white; text-decoration: none;">
+        <div class="event-box">
+          <h3 class="event-title">SECURE CAMERA</h3>
+          <div class="event-gist">
+            <pre >
+The secure camera networks project is 
+under T Senthil Kumar sir. The project 
+focuses on edge computing and
+is under the supervision of IBM.
+                
+                </pre>
+          </div>
+        </div>
+      </a>
+      </li>
+      <li>
+        <a href="tracker.html" style="color: white; text-decoration: none;" class="image-effect">
+        <div class="event-box">
+          <h3 class="event-title">CAMPUS TRACKER</h3>
+          <div class="event-gist">
+            <pre>
+Campus tracker is an initiative 
+taken by the students of BTECH 
+CSE and Mass Communication. This 
+campus tracker allows the students 
+to track their worklife. 
+                </pre>
+          </div>
+        </div>
+      </a>
+      </li>
+      <li>
+        <a href="yoga.html" style="color: white; text-decoration: none;" class="image-effect">
+        <div class="event-box">
+          <h3 class="event-title">YOGA  APP</h3>
+          <div class="event-gist">
+            <pre>
+The yoga app is developed by team
+of the students from Amrita 
+University. This Yoga form made app 
+project is an ongoing funded 
+project for GOVT of India. 
+`</pre>
+          </div>
+        </div>
+      </a>
+      </li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 College Newsletter. All rights reserved.</p>
+  </footer>
+</body>
+</html>

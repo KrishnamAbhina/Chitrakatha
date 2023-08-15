@@ -1,0 +1,305 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+            <link rel="shortcut icon" href="logo.jpg" type="image/jpg">
+
+        <style>
+            body {
+            margin: 0;
+            box-sizing: border-box;
+            }
+            .header {
+            font-size: 25px;
+            font-family:'Times New Roman';
+            color: #000;
+            }  
+            .zoomable-image {
+            transform-origin: top left;
+            transition: transform 0.3s;
+            }
+            .zoomable-image:hover {
+            transform: scale(1.2);
+            }
+            a{
+                font-size: 18px;
+            }
+            .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(153, 2, 57);
+            padding: 40px 80px;
+            }
+            .s1 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 40px 0;
+            }
+            .links {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 40px;
+            }
+            .s2 {
+            font-size: 20px;
+            color: #fff;
+            text-transform: uppercase;
+            margin: 10px 0;
+            }
+            .s3 {
+            text-decoration: none;
+            color: #a1a1a1;
+            padding: 10px 20px;
+            }
+            
+        .container {
+            box-shadow: 2px 2px 10px rgb(198, 196, 196);
+            padding: 20px;
+            padding-top: 30px;
+            align-items: center;
+            background-color: black;
+            opacity: 0.8;
+            color: #ffffff;
+            border-radius: 10px;
+            width: 35%;
+            margin: 0 auto;
+        }
+
+        .container td {
+            padding: 3px;
+        }
+
+        input,
+        select {
+            padding: 5px;
+        }
+
+        .slider {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+            animation: slideAnimation 9s infinite;
+        }
+
+        * {
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            color: #ffffff;
+            text-shadow: rgb(114, 187, 247);
+        }
+    </style>
+    <script>
+        function validate() {
+            var RollNo = document.getElementById("RollNo").value;
+            var Amemail = document.getElementById("Amemail").value;
+            var Password = document.getElementById("Password").value;
+
+            var atpos = Amemail.indexOf("@");
+            var dotpos = Amemail.lastIndexOf(".students.amrita.edu");
+
+            if (RollNo === "") {
+                alert("Please enter your Roll Number.");
+                return false;
+            }
+                if (RollNo.length !== 16) {
+                    alert("Roll number does not match the correct number of characters");
+                    return false;
+                }
+                if (!/^[\w.]+$/.test(RollNo)) {
+                    alert("Roll Number should only contain numbers, letters, or dots.");
+                    return false;
+                }
+                var dotCount = 0;
+            var digitCount = 0;
+            var charCount = 0;
+
+            for (var i = 0; i < RollNo.length; i++) {
+                if (RollNo[i] === ".") {
+                    dotCount++;
+                } else if (/[0-9]/.test(RollNo[i])) {
+                    digitCount++;
+                } else {
+                    charCount++;
+                }
+            }
+
+            if (dotCount !== 2 || digitCount !== 6 || charCount !== 8) {
+                alert("Please Enter the correct Roll Number");
+                return false;
+            }
+    
+                if (Amemail === "") {
+                    alert("Please enter your Amrita Email-ID.");
+                    return false;
+                }
+                if (Amemail.length !== 39) {
+                    alert("Mail ID does not match the correct number of characters");
+                    return false;
+                }
+                
+                var dotCount = 0;
+            var digitCount = 0;
+            var charCount = 0;
+
+            for (var i = 0; i < Amemail.length; i++) {
+                if (Amemail[i] === ".") {
+                    dotCount++;
+                } else if (/[0-9]/.test(Amemail[i])) {
+                    digitCount++;
+                } else {
+                    charCount++;
+                }
+            }
+
+            if (dotCount !== 5 || digitCount !== 6 || charCount !== 28) {
+                alert("Please Enter the correct Amrita Email-ID");
+                return false;
+            }
+                if (atpos < 1 || dotpos - atpos < 2) {
+                    alert("Please enter a valid Amrita Email-ID.");
+                    return false;
+                }
+
+            if (!/^[\w.]+$/.test(RollNo)) {
+                alert("Roll Number should only contain numbers, letters, or dots.");
+                return false;
+            }
+            if (Password === "") {
+                alert("Please enter a password.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+            
+        </style>
+        </head>
+    <body>
+        <div style="padding: 10px; background-color: rgb(153, 2, 57);"> </div>
+        <header class="header" style="background-color: #fff; padding-top: 0.1px;">
+        <p>
+        <table width="100%" style="font-size: 25px;">
+            <tr>
+                <th width="2%"> 
+                    <a href="mainpage.html" style="color: #000;"> <img class="zoomable-image" src="logo.jpg" width="50" height="50"> </a>     
+                </th>
+                <th width="20%">
+                    <a href="acaddemicfp.html" style="color: #000;"><span style="font-size: 25px; font-family:'Times New Roman';"> ACADEMICS </span></a>
+                </th>
+                <th width="20%"> 
+                    <a href="cocurfp.html" style="color: #000;"><span style="font-size: 25px; font-family:'Times New Roman';">CO CURRICULAR</span></a>
+                </th>
+                <th width="20%"> 
+                    <a href="inspofp.html" style="color: #000;"><span style="font-size: 25px; font-family:'Times New Roman';">INSPIRON</span></a>
+                </th>
+                <th width="20%"> 
+                    <a href="1.html" style="color: #000;"><span style="font-size: 25px; font-family:'Times New Roman';">OTHERS</span></a>
+                </th>
+                <th width="10%"> 
+                    <a href="post2.html" style="color: #000;"><span style="font-size: 25px; font-family:'Times New Roman';">POST</span></a>
+                </th>
+                <th width="8%"> 
+                    <a href="option.html" style="color: #000;"><img class="zoomable-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmEwalaRUsDXz_hi03tVaA56X2bP3ocnStKw&usqp=CAU" width="50" height="50"> </a>
+                </th>
+            </tr>
+        </table>
+        </p>
+        </header>
+        <br>
+
+    <div class="container">
+        <h1 style="text-align: center; font-size: 40px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Sign - in</h1>
+
+        <div style="margin-left: 17%;">
+            <form id="registrationForm" method="post" action="mainpage.html" onsubmit="return validate()">
+                <div>
+                    <label for="RollNo"><br>Roll Number: <br><br></label>
+                    <input type="text" id="RollNo" name="RollNo" placeholder="CB.EN.U4CSE22309" maxlength="16" size="30" required>
+                </div>
+                <div>
+                    <label for="Amemail"><br>Amrita Email-ID: <br><br></label>
+                    <input type="email" id="Amemail" name="Amemail" placeholder="RollNo@cb.students.amrita.edu" size="30" maxlength="50" required>
+                </div>
+                <div>
+                    <label for="Password"><br>Enter Password: <br><br></label>
+                    <input type="password" id="Password" name="Password" placeholder="********" minlength="10" size="30" maxlength="15" required>
+                </div>
+                <br>
+                <div style="margin-left: 18%;">
+                    <button type="submit" style="background-color: darkgray; padding: 3px; padding-left: 6px; padding-right: 6px;">Submit</button>
+                    <span>&emsp;&ensp;</span>
+                    <button type="reset" style="background-color: darkgray; padding: 3px; padding-left: 6px; padding-right: 6px;">Reset</button>
+                </div>
+                <div ><br>_________________________________ <br></div>
+                <br>
+                <div style="margin-left: 8%;">
+                    <button type="button" style="background-color: darkgray; padding-bottom: 3px; padding-left: 6px; padding-right: 6px;" onclick="location.href='https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=15&ct=1688814361&rver=7.0.6737.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fnlp%3d1%26RpsCsrfState%3d25dd9b5f-d0c2-a396-477d-81605e35933c&id=292841&aadredir=1&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=90015'">Sign in Using Microsoft 365&ensp;<img src="cloud.png" alt="Microsoft365" width="15px" style="padding-top: 3px;"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="slider">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+    </div>
+
+    <script>
+        var images = [
+            "pic1.jpg",
+            "north.jpg",
+            "pic3.png"
+        ];
+
+        var slideIndex = 0;
+        var slides = document.getElementsByClassName("slide");
+
+        function changeSlide() {
+            slides[slideIndex].style.backgroundImage = "url(" + images[slideIndex] + ")";
+            slideIndex++;
+            if (slideIndex === images.length) {
+                slideIndex = 0;
+            }
+            setInterval(changeSlide, 9000);
+        }
+
+        changeSlide();
+    </script>
+    <br><br><br>
+        <footer class="footer">
+            <div style="color: white;">&copy; 2023 Amrita Vishwa Vidyapeetam</div>
+            <div class="s1">
+              <div class="links">
+                <span class="s2">More Info</span>
+                <a class="s3" href="mainpage.html">Home</a>
+                <a class="s3" href="mainpage.html">About</a>
+                <a class="s3" href="readmore.html">Contact</a>
+              </div>
+            </div>
+        </footer>
+    </body>
+</html>

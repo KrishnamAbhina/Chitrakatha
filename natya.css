@@ -1,0 +1,18 @@
+
+.container {
+    position: relative;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    transition: width 2s, height 4s;
+    transition: width 2s;
+  }
+  
+body{
+  font-size: 25px;
+  background-color: rgb(99, 218, 245);
+    background-image: linear-gradient(rgb(249, 161, 85),rgb(248, 235, 172));
+}
+.image-effect:hover{
+  transform: scale(1.1);
+  transition: transform 0.6s;
+}

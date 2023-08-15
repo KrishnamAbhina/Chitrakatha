@@ -1,0 +1,302 @@
+<html>
+    <head>
+        <title> CHITHRA KATHA </title>
+        <link rel="shortcut icon" href="logo.jpg" type="image/jpg">
+
+        <style>
+            body {
+            margin: 0;
+            box-sizing: border-box;
+            }
+            .header {
+            font-size: 25px;
+            font-family:'Times New Roman';
+            color: #000;
+            margin-left: 30px;
+            }  
+            .zoomable-image {
+            transform-origin: top left;
+            transition: transform 0.3s;
+            }
+            .zoomable-image:hover {
+            transform: scale(1.2);
+            }
+            .intro {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 550px;
+            background-image:url("https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3R1ZGllc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60");
+            background-size: 98%;
+            box-shadow: 0px 2px 10px 5px rgb(190, 7, 47);
+            animation: slider 20s infinite linear;
+            background-position-x: center;
+            background-repeat: no-repeat;
+            background-color: rgb(190, 7, 47);
+            }  
+            @keyframes slider {
+            0% {background-image: url("https://cdn.pixabay.com/photo/2018/01/26/09/55/paper-3108236_1280.jpg");}
+            20% {background-image: url("https://cdn.pixabay.com/photo/2016/01/27/04/32/books-1163695_1280.jpg");}
+            50% {background-image: url("https://cdn.pixabay.com/photo/2017/03/02/15/13/letters-2111546_1280.jpg");}
+            75% {background-image: url("https://media.istockphoto.com/id/641432004/photo/vintage-feather-with-paper-and-old-book-on-table.webp?b=1&s=170667a&w=0&k=20&c=euYFDzxSj-Q94qpr0zNGsM3Ltz-icD2ekuAZ4hmYTVM=");}
+            }
+            .f1 {
+            font-size: 150px;
+            color: transparent;
+            background-image: url('https://images1.novica.net/pictures/15/p330435_2a_400.jpg');
+            background-repeat: repeat;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text; 
+            }
+            p {
+            font-size: 20px;
+            color: black;
+            text-transform: uppercase;
+            margin: 20px 0;
+            }
+            .achievements {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 40px 80px;
+            }
+            .work {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 40px;
+            }
+            .work-heading {
+            font-size: 20px;
+            color: #333333;
+            text-transform: uppercase;
+            margin: 10px 0;
+            }
+            .text1 {
+            font-size: 15px;
+            color: #585858;
+            margin: 10px 0;
+            font-family: Georgia , cursive;
+            text-transform: none;
+            }
+            i {
+            width: fit-content;
+            font-size: 50px;
+            color: #333333;
+            border-radius: 50%;
+            border: 2px solid #333333;
+            padding: 12px;
+            }
+            .wrapper{
+            padding: 10px 10%;
+            }
+            .box-area{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 40px;
+            margin-top: 50px;
+            }
+            .all1 {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif; 
+            box-sizing: border-box;
+            }
+            .box {
+	        border-radius: 10px;
+	        position: relative;
+	        overflow: hidden;
+	        box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+            }
+            .box img{
+            width: 100%;
+            border-radius: 10px;
+            display: block;
+            transition: transform 0.5s;
+            }
+            .overlay {
+	        width: 100%;
+	        height: 0;
+	        background: linear-gradient(transparent,#1c1c1c 58%);
+	        border-radius: 10px;
+	        position: absolute;
+	        left: 0;
+	        bottom: 0;
+	        overflow: hidden;
+	        display: flex;
+	        align-items: center;
+	        justify-content: center;
+	        flex-direction: column;
+	        text-align: center;
+	        font-size: 14px;
+	        transition: height 0.5s;
+            }
+            #card-area{
+            padding: 50px 0;
+            }
+            .overlay h3 {
+	        font-weight: 500;
+	        margin-bottom: 5px;
+	        margin-top: 50%;
+	        font-family: 'Bebas Neue', sans-serif;
+	        font-size: 30px;
+	        letter-spacing: 2px;
+            }
+            .overlay p {
+	        font-size: small;
+            }
+            .box:hover img{
+            transform: scale(1.1);
+            }
+            .box:hover .overlay{
+            height: 100%;
+            }
+            .about-us {
+            display: flex;
+            padding: 40px 80px;
+            border-top: 2px solid #eeeeee;
+            }
+            .img1 {
+            width: 500px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            }
+            .text2 {
+            font-size: 30px;
+            color: #333333;
+            text-transform: uppercase;
+            margin: 0;
+            }
+            .text3 {
+            font-size: 15px;
+            color: #585858;
+            margin: 10px 0;
+            }
+            .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(153, 2, 57);
+            padding: 40px 80px;
+            }
+            .s1 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 40px 0;
+            }
+            .links {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 40px;
+            }
+            .s2 {
+            font-size: 20px;
+            color: #fff;
+            text-transform: uppercase;
+            margin: 10px 0;
+            }
+            .s3 {
+            text-decoration: none;
+            color: #a1a1a1;
+            padding: 10px 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="padding: 10px; background-color: rgb(153, 2, 57);"> </div>
+        <header class="header">
+        <p>
+        <table width="100%" style="font-size: 25px;">
+            <tr>
+                <th width="2%"> 
+                    <a href="mainpage.html" style="color: #000;"> <img class="zoomable-image" src="logo.jpg" width="50" height="50"> </a>     
+                </th>
+                <th width="20%">
+                    <a href="acaddemicfp.html" style="color: #000;" class="zoomable-image"> ACADEMICS </a>
+                </th>
+                <th width="20%"> 
+                    <a href="cocurfp.html" style="color: #000;">CO CURRICULAR</a>
+                </th>
+                <th width="20%"> 
+                    <a href="inspofp.html" style="color: #000;">INSPIRON</a>
+                </th>
+                <th width="20%"> 
+                    <a href="1.html" style="color: #000;">OTHERS</a>
+                </th>
+                <th width="10%"> 
+                    <a href="post2.html" style="color: #000;">POST</a>
+                </th>
+                <th width="8%"> 
+                    <a href="option.html" style="color: #000;"><img class="zoomable-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmEwalaRUsDXz_hi03tVaA56X2bP3ocnStKw&usqp=CAU" width="50" height="50"> </a>
+                </th>
+            </tr>
+        </table>
+        </p>
+        </header>
+        <div style="padding: 3px; background-color: rgb(190, 7, 47);"> </div>
+        <main>
+            <div class="intro">
+                <h1 class="f1" >CHITRA KATHA</h1>
+                <p padding:10px style="background-color: whitesmoke;">Where learning meets fun!!!</p>
+            </div>
+            <div id="card-area" class="all">
+                <div class="wrapper">
+                    <div class="box-area">
+                        <div class="box">
+                            <img alt="" src="https://cdn.pixabay.com/photo/2019/08/24/20/51/mandala-background-4428340_1280.jpg">
+                            <div class="overlay">
+                                <h3 style="background-color: wheat;">About CHITHRA KATHA</h3>
+                                <p style="color: white;" class="all1">Share and connect with people. Share your achievements , read about others achievements and get inspired. Be it academics , co-curricular or anything else just write and post. Let students know about the latest happenings. around them.</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <img alt="" src="https://cdn.pixabay.com/photo/2019/08/24/20/23/mandala-background-4428288_1280.jpg">
+                            <div class="overlay">
+                                <h3 style="background-color: wheat;">How To Post</h3>
+                                <p style="color: white;" class="all1">As simple as it could be , first login using your college email id and then click on the post tab choose your wanted option to post and start writing...</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <img alt="" src="https://cdn.pixabay.com/photo/2019/08/24/20/58/mandala-background-4428348_1280.jpg">
+                            <div class="overlay">
+                                <h3 style="background-color: wheat;">Information</h3>
+                                <p style="color: white;" class="all1">Make sure you register before logging in. Once you log in your roll no is always noted. Abide to the rules and regulations before posting any material on this website.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="##" class="about-us">
+                <div>
+                  <h2 class="text2">About Us</h2>
+                  <p class="text3" style="color:rgb(190, 7, 47); font-family:Arial;">
+                    Welcome to CHITRA KATHA , the online hub that brings the vibrant spirit of our college community to the digital realm. 
+                    As the go-to platform for students, alumni, faculty, and staff, we strive to foster connections, facilitate collaboration, and create an engaging online environment.
+                    At CHITRA KATHA , we understand the importance of building meaningful connections and fostering a sense of belonging within our college community. 
+                    Join us and become a part of this exciting online community that celebrates the unique spirit of our college.
+                    Let's connect, collaborate, and create together.
+                    </p>
+                </div>
+                <img class="img1" style="float: right;" src="https://media.istockphoto.com/id/1294446914/photo/united-diversity.webp?b=1&s=170667a&w=0&k=20&c=70GW0Z-IA0ERkb_JBERYaHUfv0iI09PApd5FqPrq_zs=" alt="me">
+            </div>
+        </main>
+        <footer class="footer">
+            <div style="color: white;">&copy; 2023 Amrita Vishwa Vidyapeetam</div>
+            <div class="s1">
+              <div class="links">
+                <span class="s2">More Info</span>
+                <a class="s3" href="mainpage.html">Home</a>
+                <a class="s3" href="##">About</a>
+                <a class="s3" href="readmore.html">Contact</a>
+              </div>
+            </div>
+        </footer>
+    </body>
+</html>
